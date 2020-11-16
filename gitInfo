@@ -1,0 +1,23 @@
+https://www.linuxito.com/programacion/890-como-mantener-tu-fork-sincronizado-con-upstream-en-git
+
+heroku -v
+
+heroku login // to start the following
+
+heroku keys:add // to upload id_rsa.pub
+
+heroku create your-awesome-app // to create a heroku app: http and git URL’s created and directly adding git URL into our remotes
+
+heroku git:remote -a your-awesome-app
+
+At package.json:
+     "scripts": {"start": "node src/app.js"} //since heroku executes: "npm run start",
+
+At app.js: 
+    const port = process.env.PORT || 3000   // first set by heroku dynamically, second for our local set up
+
+Delete up to localhost:3000 on URL fetches // using relative paths
+
+Do git add & commit
+
+git push heroku master

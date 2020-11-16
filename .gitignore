@@ -1,3 +1,5 @@
+# archivo conección db
+*.env
 # Logs
 logs
 *.log
